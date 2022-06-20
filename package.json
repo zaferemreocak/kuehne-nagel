@@ -1,0 +1,23 @@
+{
+  "name": "kuehne-nagel",
+  "version": "1.0.0",
+  "description": "technical task for a backend developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaferemreocak/kuehne-nagel.git"
+  },
+  "author": "Zafer Emre Ocak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaferemreocak/kuehne-nagel/issues"
+  },
+  "homepage": "https://github.com/zaferemreocak/kuehne-nagel#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  }
+}
