@@ -70,32 +70,8 @@ async function fetchAndFilter(request, response) {
         .then(list => filter(list, fromDate, toDate))
         .catch(error => console.log(error));
 
-    console.log(await makeRequest(filteredList));
-
-    response.status(200).json(filteredList);
+    response.status(200).json(await makeRequest(filteredList));
 }
-
-// const fetchAndFilter = (request, response) => {
-//     let fromDate = new Date(request.query.from);
-//     let toDate = new Date(request.query.to);
-//
-//     // const getDate = (dateTime) => {
-//     //     return new Date(dateTime).toISOString().substring(0, 10);
-//     // }
-//
-//     pool.query('SELECT * FROM kn_data', (error, dataList) => {
-//         if (error) {
-//             throw error;
-//         }
-//
-//         let filteredDataList = dataList.rows.filter(data => {
-//             // let dataDate = getDate(data.date);
-//             return data.id && data.name.toLowerCase().includes('test') && data.code === '025' && (data.date > fromDate && data.date < toDate);
-//         });
-//
-//         response.status(200).json(filteredDataList);
-//     })
-// };
 
 module.exports = {
     fetchAndFilter
