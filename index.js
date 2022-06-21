@@ -3,7 +3,8 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
-const db = require('./pg-client/pg-client')
+const serviceOne = require('./fetch-and-filter')
+const serviceTwo = require('./count-by-year')
 
 app.use(bodyParser.json());
 app.use(
@@ -16,7 +17,8 @@ app.get('/', (request, response) => {
     response.json({info: 'Zafer Emre Ocak'})
 });
 
-app.get('/data', db.getData)
+app.get('/data', serviceOne.fetchAndFilter)
+app.post('/count-by-year', serviceTwo.countByYear)
 
 app.listen(port, () => {
     console.log(`App running on port ${port}`)
