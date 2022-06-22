@@ -5,7 +5,6 @@ const port = 3000
 
 const serviceOne = require('./src/fetch-and-filter')
 const serviceTwo = require('./src/count-by-year')
-const {request, response} = require("express");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
