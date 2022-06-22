@@ -63,14 +63,16 @@ function makeRequest(data) {
     });
 }
 
-async function fetchAndFilter(request, response) {
-    let fromDate = new Date(request.query.from);
-    let toDate = new Date(request.query.to);
+async function fetchAndFilter(from, to) {
+    let fromDate = new Date(from);
+    let toDate = new Date(to);
     let filteredList = await fetch()
         .then(list => filter(list, fromDate, toDate))
         .catch(error => console.log(error));
 
-    response.status(200).json(await makeRequest(filteredList));
+    // response.status(200).json(await makeRequest(filteredList));
+
+    return await makeRequest(filteredList);
 }
 
 module.exports = {
