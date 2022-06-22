@@ -3,6 +3,8 @@
 ## Run the project
 >**cd %PROJECT_LOCATION%**
 >
+>**docker build . -t api-service**
+>
 >**docker-compose up -d**
 
 ### Before sending a request to the REST API, please configure the DB
