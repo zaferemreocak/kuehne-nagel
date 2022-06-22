@@ -6,7 +6,7 @@
 >**docker-compose up -d**
 
 ### Before sending a request to the REST API, please configure the DB
-Create a new server with the below config parameters:
+Create a new server with the below config parameters in pgAdmin at `localhost:5050`:
 >*hostname/address=**local_postgres***
 *port=**5432***
 *username=**postgres***
