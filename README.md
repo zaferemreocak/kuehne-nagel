@@ -52,6 +52,9 @@ INSERT INTO kn_data values (14, 'TEST', '025', '2022-06-20');
 INSERT INTO kn_data values (15, 'Lorem ipsum', '550', '2023-10-29');
 ```
 
+### For unit testing, please run this command in your bash
+> **docker exec -it local_api npm run test**
+
 ### Finally, you can send a request using this URL via browser
 > http://localhost:3000/data?from=2010-01-20&to=2025-06-15
 
